@@ -45,6 +45,11 @@ def draw_stickfigure(mocap_track, frame, data=None, joints=None, draw_names=Fals
                     (df['%s_Xposition'%joint][frame] + 0.1, 
                      df['%s_Yposition'%joint][frame] + 0.1))
 
+    
+    plt.xlim([-50, 50])
+    plt.ylim([0, 80])
+    # plt.axis("off")
+    
     return ax
 
 def draw_stickfigure3d(mocap_track, frame, data=None, joints=None, draw_names=False, ax=None, figsize=(8,8)):
